@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Test độ khôn</title>
+
+<style>
+body{
+    background:#111;
+    color:white;
+    text-align:center;
+    font-family:Arial;
+    overflow:hidden;
+}
+
+h1{
+    margin-top:100px;
+}
+
+button{
+    padding:15px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    background:#ff4757;
+    color:white;
+    cursor:pointer;
+    position:absolute;
+    left:45%;
+    top:50%;
+    transition:0.2s;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎁 Bấm vào đây để nhận quà miễn phí</h1>
+
+<button id="btn" onclick="troll()">Bấm đi 😏</button>
+
+<script>
+
+let btn = document.getElementById("btn");
+
+btn.addEventListener("mouseover",function(){
+    let x = Math.random()*window.innerWidth;
+    let y = Math.random()*window.innerHeight;
+
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+})
+
+function troll(){
+    alert("🤣 Chúc mừng! Bạn vừa bị troll.");
+}
+
+</script>
+
+</body>
+</html>
